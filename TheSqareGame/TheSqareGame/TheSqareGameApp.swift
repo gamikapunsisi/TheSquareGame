@@ -19,14 +19,20 @@
 
 
 
-
 import SwiftUI
 
 @main
 struct TheSquareGameApp: App {
+    @State private var isLoading = true // Tracks whether the app is in the loading phase
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLoading {
+                LoadingPage(isLoading: $isLoading) // Show the loading page
+            } else {
+                ContentView() // Show the main game screen
+            }
         }
     }
 }
+
