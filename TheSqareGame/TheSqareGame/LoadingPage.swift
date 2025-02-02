@@ -30,7 +30,7 @@ struct LoadingPage: View {
         }
         .onAppear {
             // Show the Play button after 30 seconds
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 05) {
                 showPlayButton = true
             }
         }
